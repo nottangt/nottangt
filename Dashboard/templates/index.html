@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>3D Punkt Interpolation</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>3D Punkt Interpolation</h1>
+        
+        <div class="controls">
+            <div class="slider-container">
+                <label for="x-slider">X-Koordinate: <span id="x-value">2.5</span></label>
+                <input type="range" id="x-slider" min="0" max="5" step="0.1" value="2.5">
+            </div>
+            
+            <div class="slider-container">
+                <label for="y-slider">Y-Koordinate: <span id="y-value">2.5</span></label>
+                <input type="range" id="y-slider" min="0" max="5" step="0.1" value="2.5">
+            </div>
+            
+            <div class="result">
+                <p>Interpolierter Z-Wert: <span id="z-value">-</span></p>
+            </div>
+        </div>
+        
+        <div id="plot"></div>
+    </div>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html> 
